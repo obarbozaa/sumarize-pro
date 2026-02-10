@@ -11,7 +11,7 @@ export default function Home() {
     if (!url) return;
     setLoading(true);
     try {
-      const response = await fetch(`http://127.0.0.1:8000/resumir?url=${encodeURIComponent(url)}`)
+      const response = await fetch(`sumarize-pro-production.up.railway.app=${encodeURIComponent(url)}`)
       const data = await response.json()
       setResumo(data.resumo)
     } catch (error) {
